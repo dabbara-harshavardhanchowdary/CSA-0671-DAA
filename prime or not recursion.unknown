@@ -1,0 +1,16 @@
+def is_prime(num, div=2):
+    if num < 2:
+        return False
+    if num == 2:
+        return True
+    if num % div == 0:
+        return False
+    if div * div > num:
+        return True
+    return is_prime(num, div + 1)
+
+num = int(input("Enter a number to check if it is prime: "))
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
